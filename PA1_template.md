@@ -87,14 +87,6 @@ Time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the ave
 
 ```r
 x<-sapply(split(activity$steps, activity$interval), mean, na.rm = T)
-length(x)
-```
-
-```
-## [1] 288
-```
-
-```r
 plot(unique(activity$interval), x, type="l")
 ```
 
@@ -102,22 +94,28 @@ plot(unique(activity$interval), x, type="l")
 
 Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
+The maximun number of steps on average is
+
+
 ```r
-##plot(sapply(split(activity$steps, activity$interval), mean), activity$date)
-max(x)
+ max(x)
 ```
 
 ```
 ## [1] 206.1698
 ```
 
+for the interval:
+
+
 ```r
-names(x[x==max(x)])
+ names(x[x==max(x)])
 ```
 
 ```
 ## [1] "835"
 ```
+
 ## Imputing missing values
 
 ```r
