@@ -178,7 +178,47 @@ qplot( interval, x, xlab="Intervals", ylab="Steps", data=steps_means,colours=c("
 
 In above plot we can see significant averages changes in the patterns.
 
-In weekends the quantity of steps, between intervals 500 and 1000, experiment a great reduction, from approximately 76 to 45 steps per interval,   and a  increment between intervals 1000 and 2000 from approximately 43 to 70 steps per interval.
+In weekends the quantity of steps, between intervals 500 and 1000, experiment a great reduction, from approximately 76 to 45 steps per interval,   
 
+```r
+#steps for 500 to 1000 intervals
+#weekdays steps
+mean(steps_means[steps_means$day_type =="weekday" & steps_means$interval>=500 & steps_means$interval<=1000, ]$x)
+```
+
+```
+## [1] 76.01571
+```
+
+```r
+#weekends steps
+mean(steps_means[steps_means$day_type =="weekend" & steps_means$interval>=500 & steps_means$interval<=1000, ]$x)
+```
+
+```
+## [1] 45.64451
+```
+
+and a  increment between intervals 1000 and 2000 from approximately 43 to 70 steps per interval.
+
+
+```r
+#steps for 1000 to 2000 intervals
+#weekdays steps
+mean(steps_means[steps_means$day_type =="weekday" & steps_means$interval>=1000 & steps_means$interval<=2000, ]$x)
+```
+
+```
+## [1] 43.43099
+```
+
+```r
+#weekends steps
+mean(steps_means[steps_means$day_type =="weekend" & steps_means$interval>=1000 & steps_means$interval<=2000, ]$x)
+```
+
+```
+## [1] 70.84258
+```
 
 
