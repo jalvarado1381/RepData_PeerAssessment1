@@ -167,19 +167,27 @@ qplot( interval, x, xlab=&quot;Intervals&quot;, ylab=&quot;Steps&quot;, data=ste
 <p>In above plot we can see significant averages changes in the patterns.</p>
 <p>In weekends the quantity of steps, between intervals 500 and 1000, experiment a great reduction, from approximately 76 to 45 steps per interval,</p>
 <pre class="r"><code>#steps for 500 to 1000 intervals
-#weekdays steps
-mean(steps_means[steps_means$day_type ==&quot;weekday&quot; &amp; steps_means$interval&gt;=500 &amp; steps_means$interval&lt;=1000, ]$x)</code></pre>
+#weekdays average steps
+mean(steps_means[steps_means$day_type ==&quot;weekday&quot; 
+                 &amp; steps_means$interval&gt;=500 
+                 &amp; steps_means$interval&lt;=1000, ]$x)</code></pre>
 <pre><code>## [1] 76.01571</code></pre>
-<pre class="r"><code>#weekends steps
-mean(steps_means[steps_means$day_type ==&quot;weekend&quot; &amp; steps_means$interval&gt;=500 &amp; steps_means$interval&lt;=1000, ]$x)</code></pre>
+<pre class="r"><code>#weekends average steps
+mean(steps_means[steps_means$day_type ==&quot;weekend&quot; 
+                 &amp; steps_means$interval&gt;=500 
+                 &amp; steps_means$interval&lt;=1000, ]$x)</code></pre>
 <pre><code>## [1] 45.64451</code></pre>
-<p>and a increment between intervals 1000 and 2000 from approximately 43 to 70 steps per interval.</p>
+<p>and an increment between intervals 1000 and 2000 from approximately 43 to 70 steps per interval.</p>
 <pre class="r"><code>#steps for 1000 to 2000 intervals
-#weekdays steps
-mean(steps_means[steps_means$day_type ==&quot;weekday&quot; &amp; steps_means$interval&gt;=1000 &amp; steps_means$interval&lt;=2000, ]$x)</code></pre>
+#weekdays average steps
+mean(steps_means[steps_means$day_type ==&quot;weekday&quot; 
+                 &amp; steps_means$interval&gt;=1000 
+                 &amp; steps_means$interval&lt;=2000, ]$x)</code></pre>
 <pre><code>## [1] 43.43099</code></pre>
-<pre class="r"><code>#weekends steps
-mean(steps_means[steps_means$day_type ==&quot;weekend&quot; &amp; steps_means$interval&gt;=1000 &amp; steps_means$interval&lt;=2000, ]$x)</code></pre>
+<pre class="r"><code>#weekends average steps
+mean(steps_means[steps_means$day_type ==&quot;weekend&quot; 
+                 &amp; steps_means$interval&gt;=1000 
+                 &amp; steps_means$interval&lt;=2000, ]$x)</code></pre>
 <pre><code>## [1] 70.84258</code></pre>
 </div>
 
